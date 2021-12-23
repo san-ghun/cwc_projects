@@ -13,6 +13,9 @@
 		BD8DE4E3277433DD00D27385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8DE4E1277433DD00D27385 /* Main.storyboard */; };
 		BD8DE4E5277433E200D27385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8DE4E4277433E200D27385 /* Assets.xcassets */; };
 		BD8DE4E8277433E200D27385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8DE4E6277433E200D27385 /* LaunchScreen.storyboard */; };
+		BD8DE4F02774406200D27385 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DE4EF2774406200D27385 /* CardModel.swift */; };
+		BD8DE4F22774412B00D27385 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DE4F12774412B00D27385 /* Card.swift */; };
+		BD8DE4F4277443FB00D27385 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DE4F3277443FB00D27385 /* CardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		BD8DE4E4277433E200D27385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD8DE4E7277433E200D27385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD8DE4E9277433E200D27385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD8DE4EF2774406200D27385 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		BD8DE4F12774412B00D27385 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BD8DE4F3277443FB00D27385 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				BD8DE4DB277433DD00D27385 /* AppDelegate.swift */,
 				BD8DE4DD277433DD00D27385 /* SceneDelegate.swift */,
+				BD8DE4F12774412B00D27385 /* Card.swift */,
+				BD8DE4EF2774406200D27385 /* CardModel.swift */,
+				BD8DE4F3277443FB00D27385 /* CardCollectionViewCell.swift */,
 				BD8DE4DF277433DD00D27385 /* ViewController.swift */,
 				BD8DE4E1277433DD00D27385 /* Main.storyboard */,
 				BD8DE4E4277433E200D27385 /* Assets.xcassets */,
@@ -139,7 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8DE4E0277433DD00D27385 /* ViewController.swift in Sources */,
+				BD8DE4F02774406200D27385 /* CardModel.swift in Sources */,
+				BD8DE4F22774412B00D27385 /* Card.swift in Sources */,
 				BD8DE4DC277433DD00D27385 /* AppDelegate.swift in Sources */,
+				BD8DE4F4277443FB00D27385 /* CardCollectionViewCell.swift in Sources */,
 				BD8DE4DE277433DD00D27385 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
