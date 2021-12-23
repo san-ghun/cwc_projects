@@ -15,11 +15,19 @@ class CardModel {
         // Declare an empty array
         var generatedCards: [Card] = []
         
+        // Make an array with random numbers 1...13 to ready to get random card without duplicated numbers
+        let numberArray = Array(1...13).shuffled()
+        
         // Randomly generate 8 pairs of cards
-        for _ in 1...8 {
+        for i in 1...8 {
             
             // Generate a random number
-            let randomNumber = Int.random(in: 1...13)
+            //let randomNumber = Int.random(in: 1...13)   // may generate duplicated numbers
+            let randomNumber = numberArray[i]
+            //let randomNumber = arc4random_uniform(13) + 1
+            
+            // Log number
+            print("generated number: \(randomNumber)")
             
             // Create two new card objects
             let cardOne = Card()
