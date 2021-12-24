@@ -101,6 +101,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // Check if there is any time remaining. Don't le the user interact if the time is 0
+        if milliseconds <= 0 {
+            return 
+        }
+        
         // Get a reference to the cell that was tapped
         let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
         
