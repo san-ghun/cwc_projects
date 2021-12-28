@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="A">
-                                                    <backgroundConfiguration key="background">
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0">
                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
@@ -40,7 +40,7 @@
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="B">
-                                                    <backgroundConfiguration key="background">
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0">
                                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
@@ -59,7 +59,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="333.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="C">
-                                                    <backgroundConfiguration key="background">
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0">
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
@@ -73,7 +73,7 @@
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="333.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="D">
-                                                    <backgroundConfiguration key="background">
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0">
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
