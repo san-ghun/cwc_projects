@@ -13,6 +13,10 @@
 		BD627D2E277AE90700AB732C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD627D2C277AE90700AB732C /* Main.storyboard */; };
 		BD627D30277AE90A00AB732C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD627D2F277AE90A00AB732C /* Assets.xcassets */; };
 		BD627D33277AE90A00AB732C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD627D31277AE90A00AB732C /* LaunchScreen.storyboard */; };
+		BD627D3F277AEBBD00AB732C /* d.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD627D3B277AEBBD00AB732C /* d.mp3 */; };
+		BD627D40277AEBBD00AB732C /* a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD627D3C277AEBBD00AB732C /* a.mp3 */; };
+		BD627D41277AEBBD00AB732C /* b.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD627D3D277AEBBD00AB732C /* b.mp3 */; };
+		BD627D42277AEBBD00AB732C /* c.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD627D3E277AEBBD00AB732C /* c.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BD627D2F277AE90A00AB732C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD627D32277AE90A00AB732C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD627D34277AE90A00AB732C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD627D3B277AEBBD00AB732C /* d.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = d.mp3; sourceTree = "<group>"; };
+		BD627D3C277AEBBD00AB732C /* a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = a.mp3; sourceTree = "<group>"; };
+		BD627D3D277AEBBD00AB732C /* b.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = b.mp3; sourceTree = "<group>"; };
+		BD627D3E277AEBBD00AB732C /* c.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		BD627D25277AE90700AB732C /* SoundboardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD627D3A277AEBA000AB732C /* Sounds */,
 				BD627D26277AE90700AB732C /* AppDelegate.swift */,
 				BD627D28277AE90700AB732C /* SceneDelegate.swift */,
 				BD627D2A277AE90700AB732C /* ViewController.swift */,
@@ -65,6 +74,17 @@
 				BD627D34277AE90A00AB732C /* Info.plist */,
 			);
 			path = SoundboardDemo;
+			sourceTree = "<group>";
+		};
+		BD627D3A277AEBA000AB732C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BD627D3C277AEBBD00AB732C /* a.mp3 */,
+				BD627D3D277AEBBD00AB732C /* b.mp3 */,
+				BD627D3E277AEBBD00AB732C /* c.mp3 */,
+				BD627D3B277AEBBD00AB732C /* d.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +148,10 @@
 				BD627D33277AE90A00AB732C /* LaunchScreen.storyboard in Resources */,
 				BD627D30277AE90A00AB732C /* Assets.xcassets in Resources */,
 				BD627D2E277AE90700AB732C /* Main.storyboard in Resources */,
+				BD627D41277AEBBD00AB732C /* b.mp3 in Resources */,
+				BD627D40277AEBBD00AB732C /* a.mp3 in Resources */,
+				BD627D42277AEBBD00AB732C /* c.mp3 in Resources */,
+				BD627D3F277AEBBD00AB732C /* d.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
