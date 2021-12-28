@@ -21,3 +21,7 @@ TODO: - 04-CollectionViewAnimation_GeminiDemo
 TODO: - 05-SoundboardDemo
 - Find way to connect user iphone's voice memo app to play with app like drum pad
 - ...
+
+TODO: - 06-NewsAPI-JSON
+- Would be good to have more complex way to display articles with randomized API with some UI
+- ...
