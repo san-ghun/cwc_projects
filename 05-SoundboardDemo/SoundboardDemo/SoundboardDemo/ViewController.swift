@@ -18,65 +18,20 @@ class ViewController: UIViewController {
         
         
     }
-
-    @IBAction func aTapped(_ sender: Any) {
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
         
-        // Get the url
-        let url = Bundle.main.url(forResource: "a", withExtension: "mp3")
+        // Find which button is tapped
+        let filename = sender.titleLabel?.text?.lowercased()
         
-        // Make sure that have got the url, otherwias abord
-        guard url != nil else { return }
-        
-        // Create the audio player and play the sound
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url!)
-            audioPlayer?.play()
-        }
-        catch {
-            print("error")
-        }
+        // Play the sound
+        playSound(filename)
     }
     
-    @IBAction func bTapped(_ sender: Any) {
+    func playSound(_ filename: String?) {
         
         // Get the url
-        let url = Bundle.main.url(forResource: "b", withExtension: "mp3")
-        
-        // Make sure that have got the url, otherwias abord
-        guard url != nil else { return }
-        
-        // Create the audio player and play the sound
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url!)
-            audioPlayer?.play()
-        }
-        catch {
-            print("error")
-        }
-    }
-    
-    @IBAction func cTapped(_ sender: Any) {
-        
-        // Get the url
-        let url = Bundle.main.url(forResource: "c", withExtension: "mp3")
-        
-        // Make sure that have got the url, otherwias abord
-        guard url != nil else { return }
-        
-        // Create the audio player and play the sound
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url!)
-            audioPlayer?.play()
-        }
-        catch {
-            print("error")
-        }
-    }
-    
-    @IBAction func dTapped(_ sender: Any) {
-        
-        // Get the url
-        let url = Bundle.main.url(forResource: "d", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: filename, withExtension: "mp3")
         
         // Make sure that have got the url, otherwias abord
         guard url != nil else { return }
