@@ -15,7 +15,7 @@ TODO: - 01-TheCardGame
 - Allow user to reset game when game over
 - ...
 
-Tags: `MVC`, `Storyboard`, `View Life cycle`, `UICollectionView`, `Timer.scheduledTimer()`, `RunLoop.main.add()`, `AVFoundation`, `AVAudioPlayer`, `Bundle.main.path()`, `URL()`, `UIView.transition()`, `UIView.animate()`, `DispatchQueue.main.asyncAfter()`, `UICollectionView.dequeueReusableCell()`
+Tags: `MVC`, `UIKit`, `Storyboard`, `View Life cycle`, `UICollectionView`, `Timer.scheduledTimer()`, `RunLoop.main.add()`, `AVFoundation`, `AVAudioPlayer`, `Bundle.main.path()`, `URL()`, `UIView.transition()`, `UIView.animate()`, `DispatchQueue.main.asyncAfter()`, `UICollectionView.dequeueReusableCell()`
 
 Tips:
 - Keep in mind of ReusableCell in UICollectionView.
@@ -28,7 +28,7 @@ TODO: - 02-FirestoreDemo
 - Add simple CRUD process
 - ...
 
-Tags: `Firebase`, `Firestore`, `FirebaseAuth`, `Storyboard`, `AVKit`, `AVPlayer`, `AVPlayerLayer`, `Bundle.main.path()`, `URL()`, `AVPlayerItem()`, `SignUp`, `SignIn`, `Login`, `NSPredicate().evaluate()`, `regex`, `UIView.window.makeKeyAndVisible()`
+Tags: `Swift Package`, `Firebase`, `Firestore`, `FirebaseAuth`, `UIKit`, `Storyboard`, `AVKit`, `AVPlayer`, `AVPlayerLayer`, `Bundle.main.path()`, `URL()`, `AVPlayerItem()`, `SignUp`, `SignIn`, `Login`, `NSPredicate().evaluate()`, `regex`, `UIView.window.makeKeyAndVisible()`
 
 Tips:
 - How to manage Storyboard identifiers with code. (-> Constants.swift)
@@ -52,7 +52,7 @@ TODO: - 04-CollectionViewAnimation_GeminiDemo
 - Analyze the code OR Use for more animations
 - ...
 
-Tags: `Cocoapods`, `pod`, `Gemini`, `UICollectionView`, `UICollectionView.dequeueReusableCell()`, `UICollectionView.scrollViewDidScroll()`, 
+Tags: `Cocoapods`, `pod`, `Gemini`, `UIKit`, `Storyboard`, `UICollectionView`, `UICollectionView.dequeueReusableCell()`, `UICollectionView.scrollViewDidScroll()`, 
 
 Tips:
 - Using CollectionView, if imageView don't fit well in simulator, check the CollectionView's Estmate Size as None in Storyboard.
@@ -63,7 +63,7 @@ TODO: - 05-SoundboardDemo
 - Find way to connect user iphone's voice memo app to play with app like drum pad
 - ...
 
-Tags: `AVFoundation`, `AVAudioPlayer`, `Bundle.main.url()`
+Tags: `UIKit`, `Storyboard`, `AVFoundation`, `AVAudioPlayer`, `Bundle.main.url()`
 
 Tips:
 - Be aware of fit proportion when using Stack View in Storyboard.
@@ -75,7 +75,7 @@ TODO: - 06-NewsAPI-JSON
 - Would be good to have more complex way to display articles with randomized API with some UI
 - ...
 
-Tags: `Codable`, `URL(string:)`, `URLSession.shared`, `.dataTask()`, `JSONDecoder()`, `dataTask.resume()`
+Tags: `API`, `Networking`, `JSON`, `Codable`, `URL(string:)`, `URLSession.shared`, `.dataTask()`, `JSONDecoder()`, `dataTask.resume()`
 
 Tips:
 - Use Codable struct to decode JSON with `JSONDecoder()`
@@ -90,7 +90,7 @@ TODO: - 07-OCR_API_Demo
 - Build more structured system of using API call and get response
 - ...
 
-Tags: `URL()`, `URLRequest()`, `.allHTTPHeaderFields`, `.httpBody`, `.httpMethod`, `URLSession.shared`, `.dataTask()`, `JSONSerialization`, `.data(withJSONObject:, options:, )`, `.jsonObject(with:, options:, )`, `HTTPURLResponse`
+Tags: `API`, `Networking`, `JSON`, `URL()`, `URLRequest()`, `.allHTTPHeaderFields`, `.httpBody`, `.httpMethod`, `URLSession.shared`, `.dataTask()`, `JSONSerialization`, `.data(withJSONObject:, options:, )`, `.jsonObject(with:, options:, )`, `HTTPURLResponse`
 
 Tips:
 - URL Request in Swift are quite annoying, compare to Python
