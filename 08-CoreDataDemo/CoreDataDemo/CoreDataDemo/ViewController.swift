@@ -39,7 +39,12 @@ class ViewController: UIViewController {
             let request = Person.fetchRequest() as NSFetchRequest<Person>
             
             // Set the filtering and sorting on the request
+            let sort = NSSortDescriptor(key: "name", ascending: true)
+            request.sortDescriptors = [sort]
             
+            // Using NSPredicate
+            //let pred = NSPredicate(format: "name CONTAINS '%@", "T")
+            //request.predicate = pred
             
             self.items = try context.fetch(request)
             
