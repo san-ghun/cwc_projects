@@ -102,10 +102,13 @@ Tips:
 TODO: - 08-CoreDataDemo
 - ...
 
-Tags: `CoreData`, 
+Tags: `CoreData`, `NSPersistentContainer`, `NSFetchRequest<T>`, `NSManagedObjectContext()`, `DispatchQueue.main.async`, `UIAlertController`, `UIAlertAction`, `UISwipeActionsConfiguration`, `UIContextualAction`, `NSSortDescriptor`, `NSPredicate`, `NSSet`
 
 Tips:
 - Be causious to specify the coverage of CoreData entity and class by `Module` field
 - Consider which Codegen menu to use using CoreData Class 
+- When Navigation Bar and TableView are located in same StackView, StackView distribution with **Fill Proportionally** may not show TableViewCell
+- Use *Fill Proportionally* only to *adjust initial position of components* and change and use **Fill** then it will be smooth
+- Sort data with `NSSortDescriptor` and Filter data with `NSPredicate`
 
 ---
