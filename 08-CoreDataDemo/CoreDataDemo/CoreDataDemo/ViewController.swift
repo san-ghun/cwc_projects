@@ -32,6 +32,31 @@ class ViewController: UIViewController {
         fetchPeople()
     }
     
+    func relationship() {
+        
+        // Create a family
+        var family = Family(context: context)
+        family.name = "ABC Family"
+        
+        // Create a person
+        var person = Person(context: context)
+        person.name = "Meggie"
+        
+        // Add person to family
+        //person.family = family
+        // OR
+        family.addToPeople(person)
+        
+        // Save context
+        do {
+            try context.save()
+        }
+        catch {
+            print("Eror saving relationship")
+        }
+        
+    }
+    
     func fetchPeople() {
         
         // Fetch the data from Core Data to display in the tableView
@@ -39,7 +64,12 @@ class ViewController: UIViewController {
             let request = Person.fetchRequest() as NSFetchRequest<Person>
             
             // Set the filtering and sorting on the request
+            let sort = NSSortDescriptor(key: "name", ascending: true)
+            request.sortDescriptors = [sort]
             
+            // Using NSPredicate
+            //let pred = NSPredicate(format: "name CONTAINS '%@", "T")
+            //request.predicate = pred
             
             self.items = try context.fetch(request)
             
