@@ -14,6 +14,8 @@
 		BD700317277C578A0051F401 /* CoreDataDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD700315277C578A0051F401 /* CoreDataDemo.xcdatamodeld */; };
 		BD700319277C578E0051F401 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD700318277C578E0051F401 /* Assets.xcassets */; };
 		BD70031C277C578E0051F401 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD70031A277C578E0051F401 /* LaunchScreen.storyboard */; };
+		BD700325277C5CB30051F401 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700323277C5CB30051F401 /* Person+CoreDataClass.swift */; };
+		BD700326277C5CB30051F401 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700324277C5CB30051F401 /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BD700318277C578E0051F401 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD70031B277C578E0051F401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD70031D277C578E0051F401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD700323277C5CB30051F401 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD700324277C5CB30051F401 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		BD700300277C578A0051F401 = {
 			isa = PBXGroup;
 			children = (
+				BD700327277C5CBF0051F401 /* Model */,
 				BD70030B277C578A0051F401 /* CoreDataDemo */,
 				BD70030A277C578A0051F401 /* Products */,
 			);
@@ -68,6 +73,15 @@
 				BD700315277C578A0051F401 /* CoreDataDemo.xcdatamodeld */,
 			);
 			path = CoreDataDemo;
+			sourceTree = "<group>";
+		};
+		BD700327277C5CBF0051F401 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD700323277C5CB30051F401 /* Person+CoreDataClass.swift */,
+				BD700324277C5CB30051F401 /* Person+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +157,8 @@
 			files = (
 				BD700311277C578A0051F401 /* ViewController.swift in Sources */,
 				BD700317277C578A0051F401 /* CoreDataDemo.xcdatamodeld in Sources */,
+				BD700326277C5CB30051F401 /* Person+CoreDataProperties.swift in Sources */,
+				BD700325277C5CB30051F401 /* Person+CoreDataClass.swift in Sources */,
 				BD70030D277C578A0051F401 /* AppDelegate.swift in Sources */,
 				BD70030F277C578A0051F401 /* SceneDelegate.swift in Sources */,
 			);
