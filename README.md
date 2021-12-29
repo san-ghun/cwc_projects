@@ -98,3 +98,14 @@ Tips:
 - Don't forget to fire off the API Call by `dataTask.resume()`, after building the dataTask 
 
 ---
+
+TODO: - 08-CoreDataDemo
+- ...
+
+Tags: `CoreData`, 
+
+Tips:
+- Be causious to specify the coverage of CoreData entity and class by `Module` field
+- Consider which Codegen menu to use using CoreData Class 
+
+---
