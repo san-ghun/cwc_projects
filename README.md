@@ -51,6 +51,7 @@ TODO: - 04-CollectionViewAnimation_GeminiDemo
 - Play with Gemini and find out more from it
 - Analyze the code OR Use for more animations
 - ...
+- Build a photo frame app that present many photo images with animation effects
 
 Tags: `Cocoapods`, `pod`, `Gemini`, `UIKit`, `Storyboard`, `UICollectionView`, `UICollectionView.dequeueReusableCell()`, `UICollectionView.scrollViewDidScroll()`, 
 
