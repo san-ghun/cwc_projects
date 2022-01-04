@@ -7,11 +7,17 @@
 
 import UIKit
 
+// A protocole to interact with APIFunctions
+protocol DataDelegate {
+    func updateArray(newArray: String)
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var notesArray = ["Note1", "Note2", "Note3", "Note4", "Note5"]
 
     @IBOutlet weak var notesTableView: UITableView!
+    
+    // Initiate array of notes
+    var notesArray: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +26,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         notesTableView.delegate = self
         notesTableView.dataSource = self
         
+        // Assign APIFunctions delegate as self and fetch notes
+        APIFunctions.functions.delegate = self
+        APIFunctions.functions.fetchNotes()
+        
     }
-
+    
+    
+    // MARK: - UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notesArray.count
@@ -33,9 +45,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let note = self.notesArray[indexPath.row]
         
-//        cell.textLabel?.text = notesArray[indexPath.row]
+        // Initiate content configuration for cell
         var content = cell.defaultContentConfiguration()
-        content.text = note
+        
+        // Update content for cell
+        content.text = note.title
         
         cell.contentConfiguration = content
         
@@ -43,3 +57,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 }
 
+extension ViewController: DataDelegate {
+    
+    func updateArray(newArray: String) {
+        
+        do {
+            // Decode reponse data into Note() and assign to notesArray
+            notesArray = try JSONDecoder().decode([Note].self, from: newArray.data(using: .utf8)!)
+            print(notesArray)
+        }
+        catch {
+            print("Failed to decode")
+        }
+        
+        // Reload updated data for TableView
+        self.notesTableView.reloadData()
+    }
+    
+    
+}
