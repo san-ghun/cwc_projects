@@ -20,18 +20,28 @@ class APIFunctions {
     // Make instance as singleton
     static let functions = APIFunctions()
     
-    var baseURL = "http://0.0.0.0:8081"
-    
     var delegate: DataDelegate?
     
-    // Fetch notes from server and hand over to delegate
+    var baseURL = "http://0.0.0.0:8081"
+    
+    // Method to Fetch notes from server
     func fetchNotes() {
         
+        // Send GET request to fetch all data and hand over to delegate
         AF.request(baseURL + "/fetch").response { response in
             
             let data = String(data: response.data!, encoding: .utf8)
             
             self.delegate?.updateArray(newArray: data!)
+            
+        }
+    }
+    
+    // Method to Create note and save in server
+    func addNote(title: String, note: String, date: String) {
+        
+        // Send POST reqeust to save note
+        AF.request(baseURL + "/create", method: .post, encoding: URLEncoding.httpBody, headers: ["title": title, "note": note, "date": date]).responseData { response in
             
         }
     }

@@ -58,7 +58,7 @@
         <!--Add Note-->
         <scene sceneID="roZ-Yy-WVg">
             <objects>
-                <viewController id="DSQ-ie-SjJ" sceneMemberID="viewController">
+                <viewController id="DSQ-ie-SjJ" customClass="AddNoteViewController" customModule="MongodbNoteDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHb-vr-Yvy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,12 +91,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Note" id="foM-CP-0zt">
                         <rightBarButtonItems>
-                            <barButtonItem title="Save" id="7g1-YB-9fg"/>
+                            <barButtonItem title="Save" id="7g1-YB-9fg">
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="DSQ-ie-SjJ" id="Qvu-Rp-yaX"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Delete" id="bMc-3h-mRF">
                                 <color key="tintColor" systemColor="systemRedColor"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bodyTextView" destination="1sH-1j-2hU" id="dSG-LA-kVF"/>
+                        <outlet property="saveButton" destination="7g1-YB-9fg" id="Eq4-lO-Hdn"/>
+                        <outlet property="titleTextField" destination="Mwj-yH-woi" id="JRR-OB-l7R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0T-qy-bUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
