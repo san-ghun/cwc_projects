@@ -113,3 +113,11 @@ Tips:
 - Sort data with `NSSortDescriptor` and Filter data with `NSPredicate`
 
 ---
+
+TODO: - 09-MongodbNoteDemo
+- ...
+
+Tags: `Alamofire`, `Swift Package`, `Navigation Controller`, `UITableView`, `Singleton`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `JSONDecoder`, `dequeueReusableCell`, `Cell.contentConfiguration`, `viewWillAppear`, `AF.request().response {}`, `AF.request().responseData {}`, `URLEncoding.httpBody`, `Server-Client`, `MongoDB`, `Node.js`, `Express`, `Mongoose`, `JSON`, `REST-API`, `HTTP`
+
+Tips:
+- ...
