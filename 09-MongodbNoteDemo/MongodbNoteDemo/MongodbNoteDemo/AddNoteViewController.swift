@@ -9,20 +9,25 @@ import UIKit
 
 class AddNoteViewController: UIViewController {
     
+    // MARK: - Properties
+    var note: Note?
+    var isUpdate = false
+    
+    // MARK: IBOutlets
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     
-    var note: Note?
-    var isUpdate = false
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-        // Take note data and show if exist which mean it is for update 
+        // Take note data and show if exist which mean it is for update
         titleTextField.text = note?.title
         bodyTextView.text = note?.note
     }
@@ -37,18 +42,21 @@ class AddNoteViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
+    // MARK: - Methods
+    
+    // MARK: IBActions
     @IBAction func saveButtonTapped(_ sender: Any) {
         
         let dateFormatter = DateFormatter()
@@ -71,7 +79,7 @@ class AddNoteViewController: UIViewController {
                 
             }
             
-            // Pop current ViewController and move to previous ViewController
+            // Pop current ViewController and return the screen back to the main screen
             navigationController?.popViewController(animated: true)
         }
         

@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+// MARK: - Custom Notes Struct
+
 struct Note: Decodable {
     var title: String
     var date: String
@@ -15,14 +17,22 @@ struct Note: Decodable {
     var _id: String
 }
 
+// MARK: - Functions that interact with API
+
 class APIFunctions {
+    
+    // MARK: - Properties
+    
+    var baseURL = "http://0.0.0.0:8081"
     
     // Make instance as singleton
     static let functions = APIFunctions()
     
+    // Sets ductom data delegate
     var delegate: DataDelegate?
     
-    var baseURL = "http://0.0.0.0:8081"
+    
+    // MARK: - Methods
     
     // Method to Fetch notes from server
     func fetchNotes() {
@@ -30,14 +40,16 @@ class APIFunctions {
         // Send GET request to fetch all data and hand over to delegate
         AF.request(baseURL + "/fetch").response { response in
             
+            // Convert the response into utf8 string format
             let data = String(data: response.data!, encoding: .utf8)
             
+            // Fire off the custom delegate in the view controller
             self.delegate?.updateArray(newArray: data!)
             
         }
     }
     
-    // Method to Create note and save in server
+    // Method to Create note and save in server, passing the arguements as headers
     func addNote(title: String, note: String, date: String) {
         
         // Send POST reqeust to save note
@@ -46,7 +58,7 @@ class APIFunctions {
         }
     }
     
-    // Method to Update note and save in server
+    // Method to Update note and save in server, passing the arguements as headers
     func updateNote(title: String, note: String, date: String, id: String) {
         
         // Send POST reqeust to update note
@@ -55,7 +67,7 @@ class APIFunctions {
         }
     }
     
-    // Method to Delete note and save in server
+    // Method to Delete note from server, passing the arguements as headers
     func deleteNote(id: String) {
         
         // Send POST reqeust to delete note
