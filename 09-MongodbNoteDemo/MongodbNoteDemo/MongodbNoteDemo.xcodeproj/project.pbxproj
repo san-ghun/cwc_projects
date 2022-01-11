@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD07B8DC27842B1600B58C1F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BD07B8DB27842B1600B58C1F /* Alamofire */; };
+		BD07B8DE27842BB300B58C1F /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07B8DD27842BB300B58C1F /* APIFunctions.swift */; };
+		BD07B8E32785C99400B58C1F /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07B8E22785C99400B58C1F /* AddNoteViewController.swift */; };
+		BD97470D278D45670071A85A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD97470C278D45670071A85A /* Constants.swift */; };
+		BD97470F278D5B420071A85A /* NotePrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD97470E278D5B420071A85A /* NotePrototypeCell.swift */; };
 		BDB6AE8B27808C4F006F5B49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6AE8A27808C4F006F5B49 /* AppDelegate.swift */; };
 		BDB6AE8D27808C4F006F5B49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6AE8C27808C4F006F5B49 /* SceneDelegate.swift */; };
 		BDB6AE8F27808C4F006F5B49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6AE8E27808C4F006F5B49 /* ViewController.swift */; };
@@ -16,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD07B8DD27842BB300B58C1F /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
+		BD07B8E22785C99400B58C1F /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		BD97470C278D45670071A85A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BD97470E278D5B420071A85A /* NotePrototypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePrototypeCell.swift; sourceTree = "<group>"; };
 		BDB6AE8727808C4F006F5B49 /* MongodbNoteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongodbNoteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB6AE8A27808C4F006F5B49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB6AE8C27808C4F006F5B49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +40,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD07B8DC27842B1600B58C1F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD97470B278D452F0071A85A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BD97470C278D45670071A85A /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		BDB6AE7E27808C4F006F5B49 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +74,7 @@
 		BDB6AE8927808C4F006F5B49 /* MongodbNoteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD97470B278D452F0071A85A /* Utilities */,
 				BDB6AE8A27808C4F006F5B49 /* AppDelegate.swift */,
 				BDB6AE8C27808C4F006F5B49 /* SceneDelegate.swift */,
 				BDB6AE8E27808C4F006F5B49 /* ViewController.swift */,
@@ -63,6 +82,9 @@
 				BDB6AE9327808C54006F5B49 /* Assets.xcassets */,
 				BDB6AE9527808C54006F5B49 /* LaunchScreen.storyboard */,
 				BDB6AE9827808C54006F5B49 /* Info.plist */,
+				BD07B8DD27842BB300B58C1F /* APIFunctions.swift */,
+				BD07B8E22785C99400B58C1F /* AddNoteViewController.swift */,
+				BD97470E278D5B420071A85A /* NotePrototypeCell.swift */,
 			);
 			path = MongodbNoteDemo;
 			sourceTree = "<group>";
@@ -83,6 +105,9 @@
 			dependencies = (
 			);
 			name = MongodbNoteDemo;
+			packageProductDependencies = (
+				BD07B8DB27842B1600B58C1F /* Alamofire */,
+			);
 			productName = MongodbNoteDemo;
 			productReference = BDB6AE8727808C4F006F5B49 /* MongodbNoteDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,9 @@
 				Base,
 			);
 			mainGroup = BDB6AE7E27808C4F006F5B49;
+			packageReferences = (
+				BD07B8DA27842B1600B58C1F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BDB6AE8827808C4F006F5B49 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD07B8DE27842BB300B58C1F /* APIFunctions.swift in Sources */,
 				BDB6AE8F27808C4F006F5B49 /* ViewController.swift in Sources */,
 				BDB6AE8B27808C4F006F5B49 /* AppDelegate.swift in Sources */,
+				BD97470F278D5B420071A85A /* NotePrototypeCell.swift in Sources */,
+				BD07B8E32785C99400B58C1F /* AddNoteViewController.swift in Sources */,
 				BDB6AE8D27808C4F006F5B49 /* SceneDelegate.swift in Sources */,
+				BD97470D278D45670071A85A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD07B8DA27842B1600B58C1F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD07B8DB27842B1600B58C1F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD07B8DA27842B1600B58C1F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDB6AE7F27808C4F006F5B49 /* Project object */;
 }
