@@ -55,4 +55,12 @@ class APIFunctions {
         }
     }
     
+    // Method to Delete note and save in server
+    func deleteNote(id: String) {
+        
+        // Send POST reqeust to delete note
+        AF.request(baseURL + "/delete", method: .post, encoding: URLEncoding.httpBody, headers: ["id": id]).responseData { response in
+            print(response)
+        }
+    }
 }

@@ -12,6 +12,7 @@ class AddNoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
     
     var note: Note?
     var isUpdate = false
@@ -24,6 +25,16 @@ class AddNoteViewController: UIViewController {
         // Take note data and show if exist which mean it is for update 
         titleTextField.text = note?.title
         bodyTextView.text = note?.note
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // if Create new note there will no Delete button appear
+        if isUpdate == false {
+            self.deleteButton.isEnabled = false
+            self.deleteButton.title = ""
+        }
     }
     
 
@@ -48,7 +59,7 @@ class AddNoteViewController: UIViewController {
             
         } else {
             
-            // Call addNote method from APIFunctions to Update note
+            // Call updateNote method from APIFunctions to Update note
             APIFunctions.functions.updateNote(title: titleTextField.text!, note: bodyTextView.text, date: "Placeholder", id: note!._id)
             
         }
@@ -58,5 +69,12 @@ class AddNoteViewController: UIViewController {
         
     }
     
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        
+        // Call deleteNote method from APIFunctions to Delete note
+        APIFunctions.functions.deleteNote(id: note!._id)
+        
+        navigationController?.popViewController(animated: true)
+    }
     
 }
