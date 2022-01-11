@@ -27,6 +27,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="DSQ-ie-SjJ" kind="show" identifier="updateNoteSegue" id="Hp7-RO-Dvr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -43,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Notes" id="fIq-fV-93S">
                         <barButtonItem key="rightBarButtonItem" title="Add Note" id="p9e-G8-gg3">
                             <connections>
-                                <segue destination="DSQ-ie-SjJ" kind="show" id="9LD-rb-HsW"/>
+                                <segue destination="DSQ-ie-SjJ" kind="show" identifier="addNoteSegue" id="9LD-rb-HsW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -130,6 +133,9 @@
             <point key="canvasLocation" x="28.985507246376812" y="65.625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hp7-RO-Dvr"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

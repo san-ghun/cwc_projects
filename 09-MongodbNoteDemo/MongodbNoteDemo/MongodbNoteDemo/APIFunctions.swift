@@ -42,7 +42,16 @@ class APIFunctions {
         
         // Send POST reqeust to save note
         AF.request(baseURL + "/create", method: .post, encoding: URLEncoding.httpBody, headers: ["title": title, "note": note, "date": date]).responseData { response in
-            
+            print(response)
+        }
+    }
+    
+    // Method to Update note and save in server
+    func updateNote(title: String, note: String, date: String, id: String) {
+        
+        // Send POST reqeust to update note
+        AF.request(baseURL + "/update", method: .post, encoding: URLEncoding.httpBody, headers: ["title": title, "note": note, "date": date, "id": id]).responseData { response in
+            print(response)
         }
     }
     

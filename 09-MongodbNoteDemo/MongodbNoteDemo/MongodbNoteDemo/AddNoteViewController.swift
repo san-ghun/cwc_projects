@@ -13,13 +13,17 @@ class AddNoteViewController: UIViewController {
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var note: Note?
+    var isUpdate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        
+        // Take note data and show if exist which mean it is for update 
+        titleTextField.text = note?.title
+        bodyTextView.text = note?.note
     }
     
 
@@ -36,8 +40,22 @@ class AddNoteViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        // Call addNote method from APIFunctions to create note
-        APIFunctions.functions.addNote(title: titleTextField.text!, note: bodyTextView.text, date: "Placeholder")
+        // Check this view is for Create or Update note
+        if isUpdate == false {
+            
+            // Call addNote method from APIFunctions to Create note
+            APIFunctions.functions.addNote(title: titleTextField.text!, note: bodyTextView.text, date: "Placeholder")
+            
+        } else {
+            
+            // Call addNote method from APIFunctions to Update note
+            APIFunctions.functions.updateNote(title: titleTextField.text!, note: bodyTextView.text, date: "Placeholder", id: note!._id)
+            
+        }
+        
+        // Pop current ViewController and move to previous ViewController
+        navigationController?.popViewController(animated: true)
+        
     }
     
     

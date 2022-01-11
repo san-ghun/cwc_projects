@@ -19,6 +19,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Initiate array of notes
     var notesArray: [Note] = []
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let vc = segue.destination as! AddNoteViewController
+        
+        if segue.identifier == Constants.Segue.updateNoteSegue {
+            vc.note = notesArray[notesTableView.indexPathForSelectedRow!.row]
+            vc.isUpdate = true
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,6 +45,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Fetch notes
+        APIFunctions.functions.fetchNotes()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         APIFunctions.functions.fetchNotes()
     }
     
@@ -47,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.prototypeCell, for: indexPath)
         
         let note = self.notesArray[indexPath.row]
         
