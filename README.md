@@ -101,6 +101,8 @@ Tips:
 ---
 
 TODO: - 08-CoreDataDemo
+- CoreData is quite similar but also more annoying compare to traditional SQL Database, but can find fun with playing with it
+- Better find way to play with CloudKit
 - ...
 
 Tags: `CoreData`, `NSPersistentContainer`, `NSFetchRequest<T>`, `NSManagedObjectContext()`, `DispatchQueue.main.async`, `UIAlertController`, `UIAlertAction`, `UISwipeActionsConfiguration`, `UIContextualAction`, `NSSortDescriptor`, `NSPredicate`, `NSSet`
@@ -115,9 +117,14 @@ Tips:
 ---
 
 TODO: - 09-MongodbNoteDemo
+- Fun to play with custom server app with database
 - ...
 
-Tags: `Alamofire`, `Swift Package`, `Navigation Controller`, `UITableView`, `Singleton`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `JSONDecoder`, `dequeueReusableCell`, `Cell.contentConfiguration`, `viewWillAppear`, `AF.request().response {}`, `AF.request().responseData {}`, `URLEncoding.httpBody`, `Server-Client`, `MongoDB`, `Node.js`, `Express`, `Mongoose`, `JSON`, `REST-API`, `HTTP`
+Tags: `Alamofire`, `Swift Package`, `Navigation Controller`, `UITableView`, `Singleton`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `JSONDecoder`, `dequeueReusableCell`, `Cell.contentConfiguration`, `viewWillAppear`, `AF.request().response {}`, `AF.request().responseData {}`, `URLEncoding.httpBody`, `Server-Client`, `MongoDB`, `Node.js`, `Express`, `Mongoose`, `JSON`, `REST-API`, `HTTP`, `segue.destination`, `segue.identifier`, `viewWillAppear()`, `viewDidAppear()`, `navigationController.popViewController()`, `DateFormatter().dateFormat`, `Date()`, `UITableViewCell`
 
 Tips:
-- ...
+- Docker or any kinds of containerization tech like podman are very useful
+- When code get larger, don't forget to organize and also don't postpone to organize and make comment
+- ... 
+
+---
