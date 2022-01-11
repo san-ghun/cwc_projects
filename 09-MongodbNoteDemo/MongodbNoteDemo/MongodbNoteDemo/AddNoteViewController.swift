@@ -51,21 +51,29 @@ class AddNoteViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-        // Check this view is for Create or Update note
-        if isUpdate == false {
-            
-            // Call addNote method from APIFunctions to Create note
-            APIFunctions.functions.addNote(title: titleTextField.text!, note: bodyTextView.text, date: "Placeholder")
-            
-        } else {
-            
-            // Call updateNote method from APIFunctions to Update note
-            APIFunctions.functions.updateNote(title: titleTextField.text!, note: bodyTextView.text, date: "Placeholder", id: note!._id)
-            
-        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyy-MM-dd"
+        let date = dateFormatter.string(from: Date())
         
-        // Pop current ViewController and move to previous ViewController
-        navigationController?.popViewController(animated: true)
+        // Check title text and body text are not empty
+        if titleTextField.text != "" && bodyTextView.text != "" {
+            
+            // Check this view is for Create or Update note
+            if isUpdate == false {
+                
+                // Call addNote method from APIFunctions to Create note
+                APIFunctions.functions.addNote(title: titleTextField.text!, note: bodyTextView.text, date: date)
+                
+            } else {
+                
+                // Call updateNote method from APIFunctions to Update note
+                APIFunctions.functions.updateNote(title: titleTextField.text!, note: bodyTextView.text, date: date, id: note!._id)
+                
+            }
+            
+            // Pop current ViewController and move to previous ViewController
+            navigationController?.popViewController(animated: true)
+        }
         
     }
     

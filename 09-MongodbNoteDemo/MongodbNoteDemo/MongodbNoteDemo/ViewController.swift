@@ -64,18 +64,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.prototypeCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Storyboard.prototypeCell, for: indexPath) as! NotePrototypeCell
         
         let note = self.notesArray[indexPath.row]
         
-        // Initiate content configuration for cell
-        var content = cell.defaultContentConfiguration()
-        
-        // Update content for cell
-        content.text = note.title
-        
-        cell.contentConfiguration = content
-        
+        cell.title.text = note.title
+        cell.note.text = note.note
+        cell.date.text = note.date
+              
         return cell
     }
 }
