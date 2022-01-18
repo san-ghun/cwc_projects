@@ -1,0 +1,3 @@
+[submodule "10-cwcYoutubeApp/cwcYoutubeApp"]
+	path = 10-cwcYoutubeApp/cwcYoutubeApp
+	url = https://github.com/san-ghun/cwcYoutubeApp.git
