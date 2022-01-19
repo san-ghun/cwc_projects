@@ -131,9 +131,10 @@ Tips:
 
 TODO: - 10-cwcYoutubeApp
 - Might be good idea to present an application introducing brand or channel with their Youtube video. 
+- Have to find out better and best way to handling secrets in app. [reference](https://nshipster.com/secrets/)
 - ...
 
-Tags: `MVC`, `UIKit`, `Storyboard`, `View Life cycle`, `API`, `YouTube data API v3`, `Networking`, `JSON`, `CI/CD`, `Bitrise`, `Swift Package`, `YouTubeiOSPlayerHelper`, `Codable`, `URL(string:)`, `URLSession.shared`, `.dataTask()`, `JSONDecoder()`, `dataTask.resume()`, `UITableView`, `Custom TableViewCell`, `prepare(for segue: )`, `WebViews`, `Hugging priority in UIKit`, `DateFormatter()`, `Singleton`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `JSONDecoder`, `dequeueReusableCell`, `DispatchQueue.main.async`, `JSONDecoder()`, `decoder.dateDecodingStrategy = .iso8601`, `dataTask.resume()`, `decoder.container()`, `container.decode()`, `container.nestedContainer()`, 
+Tags: `MVC`, `UIKit`, `Storyboard`, `View Life cycle`, `API`, `YouTube data API v3`, `Networking`, `JSON`, `CI/CD`, `Bitrise`, `Swift Package`, `YouTubeiOSPlayerHelper`, `Codable`, `URL(string:)`, `URLSession.shared`, `.dataTask()`, `JSONDecoder()`, `dataTask.resume()`, `UITableView`, `Custom TableViewCell`, `prepare(for segue: )`, `WebViews`, `Hugging priority in UIKit`, `DateFormatter()`, `Singleton`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `JSONDecoder`, `dequeueReusableCell`, `DispatchQueue.main.async`, `JSONDecoder()`, `decoder.dateDecodingStrategy = .iso8601`, `dataTask.resume()`, `decoder.container()`, `container.decode()`, `container.nestedContainer()`, `git submodule`, `.gitmodules`
 
 Tips:
 - Use [NSDateFormatter.com](NSDateFormatter.com) to find proper DateFormatter easy.
