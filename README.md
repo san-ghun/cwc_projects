@@ -130,9 +130,9 @@ Tips:
 ---
 
 TODO: - 10-cwcYoutubeApp
-- Might be good idea to present an application introducing brand or channel with their Youtube video. 
+- Keep the demo app as non published project, and let's assume users have knowledge to input API_KEY and YouTube Video List ID for their own.
 - Have to find out better and best way to handling secrets in app. [reference](https://nshipster.com/secrets/)
-- ...
+- Might be good idea to present an application introducing brand or channel with their Youtube video. 
 
 Tags: `MVC`, `UIKit`, `Storyboard`, `View Life cycle`, `API`, `YouTube data API v3`, `Networking`, `JSON`, `CI/CD`, `Bitrise`, `Swift Package`, `YouTubeiOSPlayerHelper`, `Codable`, `URL(string:)`, `URLSession.shared`, `.dataTask()`, `JSONDecoder()`, `dataTask.resume()`, `UITableView`, `Custom TableViewCell`, `prepare(for segue: )`, `WebViews`, `Hugging priority in UIKit`, `DateFormatter()`, `Singleton`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `JSONDecoder`, `dequeueReusableCell`, `DispatchQueue.main.async`, `JSONDecoder()`, `decoder.dateDecodingStrategy = .iso8601`, `dataTask.resume()`, `decoder.container()`, `container.decode()`, `container.nestedContainer()`, `git submodule`, `.gitmodules`
 
