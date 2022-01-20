@@ -10,7 +10,7 @@ make records and keep on practice
 
 ---
 
-TODO: - 01-TheCardGame
+TODO: - [01-TheCardGame](https://github.com/san-ghun/cwc_projects/tree/develop/01-TheCardGame/TheCardGame)
 - Optimize the timer time to allow user to winable
 - Allow user to reset game when game over
 - ...
@@ -24,7 +24,7 @@ ref) [iOS ) View Controller의 생명주기(Life-Cycle) - ZeddiOS](https://zeddi
 
 ---
 
-TODO: - 02-FirestoreDemo
+TODO: - [02-FirestoreDemo](https://github.com/san-ghun/cwc_projects/tree/develop/02-FirestoreDemo/FirestoreDemo)
 - Add simple CRUD process
 - ...
 
@@ -36,7 +36,7 @@ Tips:
 
 ---
 
-TODO: - 03-LocalNotificationsDemo
+TODO: - [03-LocalNotificationsDemo](https://github.com/san-ghun/cwc_projects/tree/develop/03-LocalNotificationDemo/LocalNotificationsDemo)
 - Add other notification practices
 - ...
 
@@ -47,7 +47,7 @@ Tips:
 
 ---
 
-TODO: - 04-CollectionViewAnimation_GeminiDemo
+TODO: - [04-CollectionViewAnimation_GeminiDemo](https://github.com/san-ghun/cwc_projects/tree/develop/04-CollectionViewAnimation_GeminiDemo/GeminiDemo)
 - Play with Gemini and find out more from it
 - Analyze the code OR Use for more animations
 - ...
@@ -60,7 +60,7 @@ Tips:
 
 ---
 
-TODO: - 05-SoundboardDemo
+TODO: - [05-SoundboardDemo](https://github.com/san-ghun/cwc_projects/tree/develop/05-SoundboardDemo/SoundboardDemo)
 - Find way to connect user iphone's voice memo app to play with app like drum pad
 - ...
 
@@ -72,7 +72,7 @@ Tips:
 
 ---
 
-TODO: - 06-NewsAPI-JSON
+TODO: - [06-NewsAPI-JSON](https://github.com/san-ghun/cwc_projects/tree/develop/06-NewsAPI-JSON/NewsAPI-JSON)
 - Would be good to have more complex way to display articles with randomized API with some UI
 - ...
 
@@ -86,7 +86,7 @@ Tips:
 
 ---
 
-TODO: - 07-OCR_API_Demo
+TODO: - [07-OCR_API_Demo](https://github.com/san-ghun/cwc_projects/tree/develop/07-OCR_API_Demo/OCR-API-Demo)
 - Try other APIs those take body with more complex data, such as image and video
 - Build more structured system of using API call and get response
 - ...
@@ -100,7 +100,7 @@ Tips:
 
 ---
 
-TODO: - 08-CoreDataDemo
+TODO: - [08-CoreDataDemo](https://github.com/san-ghun/cwc_projects/tree/develop/08-CoreDataDemo/CoreDataDemo)
 - CoreData is quite similar but also more annoying compare to traditional SQL Database, but can find fun with playing with it
 - Better find way to play with CloudKit
 - ...
@@ -116,7 +116,7 @@ Tips:
 
 ---
 
-TODO: - 09-MongodbNoteDemo
+TODO: - [09-MongodbNoteDemo](https://github.com/san-ghun/cwc_projects/tree/develop/09-MongodbNoteDemo)
 - Fun to play with custom server app with database
 - ...
 
@@ -129,7 +129,7 @@ Tips:
 
 ---
 
-TODO: - 10-cwcYoutubeApp
+TODO: - [10-cwcYoutubeApp](https://github.com/san-ghun/cwcYoutubeApp)
 - Keep the demo app as non published project, and let's assume users have knowledge to input API_KEY and YouTube Video List ID for their own.
 - Have to find out better and best way to handling secrets in app. [reference](https://nshipster.com/secrets/)
 - Might be good idea to present an application introducing brand or channel with their Youtube video. 
