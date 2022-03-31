@@ -7,6 +7,7 @@
 
 import UIKit
 
+// In this tutorial for Delegate Pattern, this ViewController role as a Intern of SelectionViewController.
 class BaseViewController: UIViewController {
     
     // MARK: - Properties
@@ -34,7 +35,19 @@ class BaseViewController: UIViewController {
     // MARK: IBActions
     @IBAction func chooseButtonTapped(_ sender: Any) {
         let selectionVC = storyboard?.instantiateViewController(withIdentifier: self.selectionViewID) as! SelectioinViewController
+        selectionVC.selectionDelegate = self
+        selectionVC.modalPresentationStyle = .fullScreen
         present(selectionVC, animated: true, completion: nil)
+    }
+    
+}
+
+extension BaseViewController: SideSelectionDelegate {
+    
+    func didTapChoice(image: UIImage, name: String, color: UIColor) {
+        mainImageView.image = image
+        nameLabel.text = name
+        view.backgroundColor = color
     }
     
 }
