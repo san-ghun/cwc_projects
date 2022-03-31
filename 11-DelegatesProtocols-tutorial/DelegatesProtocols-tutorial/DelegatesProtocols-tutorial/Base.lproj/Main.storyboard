@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DelegatesProtocols_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="DelegatesProtocols_tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                     <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fll-d1-gED"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53Z-T3-g4E">
                                 <rect key="frame" x="20" y="445.5" width="374" height="59"/>
@@ -60,15 +63,20 @@
                             <constraint firstItem="53Z-T3-g4E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zR5-yJ-0TN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="fdj-Sp-N4y" id="nh0-Hg-bcO"/>
+                        <outlet property="mainImageView" destination="PR5-m2-8QH" id="lQi-9B-Bxs"/>
+                        <outlet property="nameLabel" destination="53Z-T3-g4E" id="g1d-de-Rvj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--Selectioin View Controller-->
         <scene sceneID="L1S-8C-lkZ">
             <objects>
-                <viewController id="O8v-97-2xF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectionView" id="O8v-97-2xF" customClass="SelectioinViewController" customModule="DelegatesProtocols_tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhR-Hc-G0e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,32 +91,46 @@
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imperial" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-L4-ywz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ao-kl-znL">
                                 <rect key="frame" x="132" y="293" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="b0K-JR-26F"/>
-                                    <constraint firstAttribute="width" constant="150" id="yIe-JU-yZj"/>
+                                    <constraint firstAttribute="width" constant="150" id="WKe-F7-k99"/>
+                                    <constraint firstAttribute="height" constant="150" id="teE-7u-DSO"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rebel" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-oy-CmK">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="imperial"/>
+                                <connections>
+                                    <action selector="imperialButtonTapped:" destination="O8v-97-2xF" eventType="touchUpInside" id="8EO-He-A9A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-CR-r7c">
                                 <rect key="frame" x="132" y="493" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Pe2-ze-ubm"/>
-                                    <constraint firstAttribute="height" constant="150" id="tcL-Am-39D"/>
+                                    <constraint firstAttribute="height" constant="150" id="V70-bv-bYK"/>
+                                    <constraint firstAttribute="width" constant="150" id="rCn-dh-mDs"/>
                                 </constraints>
-                            </imageView>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="rebel"/>
+                                <connections>
+                                    <action selector="rebelButtonTapped:" destination="O8v-97-2xF" eventType="touchUpInside" id="gwD-cK-KTk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="agW-hz-eZB"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tnJ-CR-r7c" firstAttribute="centerX" secondItem="zhR-Hc-G0e" secondAttribute="centerX" id="3w9-O6-lGZ"/>
                             <constraint firstItem="weQ-IS-zou" firstAttribute="top" secondItem="agW-hz-eZB" secondAttribute="top" constant="80" id="A7O-Ui-yos"/>
-                            <constraint firstItem="mIy-L4-ywz" firstAttribute="centerX" secondItem="zhR-Hc-G0e" secondAttribute="centerX" id="cXe-4r-HPg"/>
-                            <constraint firstItem="mIy-L4-ywz" firstAttribute="centerY" secondItem="zhR-Hc-G0e" secondAttribute="centerY" constant="-80" id="ddR-S0-hN0"/>
+                            <constraint firstItem="tnJ-CR-r7c" firstAttribute="top" secondItem="3Ao-kl-znL" secondAttribute="bottom" constant="50" id="YKL-8t-arZ"/>
+                            <constraint firstItem="3Ao-kl-znL" firstAttribute="centerX" secondItem="zhR-Hc-G0e" secondAttribute="centerX" id="YMN-V5-pUA"/>
                             <constraint firstItem="weQ-IS-zou" firstAttribute="centerX" secondItem="zhR-Hc-G0e" secondAttribute="centerX" id="fbX-J7-bqk"/>
-                            <constraint firstItem="gbe-oy-CmK" firstAttribute="top" secondItem="mIy-L4-ywz" secondAttribute="bottom" constant="50" id="o9a-6g-ShS"/>
-                            <constraint firstItem="gbe-oy-CmK" firstAttribute="centerX" secondItem="zhR-Hc-G0e" secondAttribute="centerX" id="oKj-Z1-h2U"/>
+                            <constraint firstItem="3Ao-kl-znL" firstAttribute="centerY" secondItem="zhR-Hc-G0e" secondAttribute="centerY" constant="-80" id="hRg-V6-TtK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imperialButton" destination="3Ao-kl-znL" id="a7Q-UV-Ybm"/>
+                        <outlet property="rebelButton" destination="tnJ-CR-r7c" id="ppH-x2-Bax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJn-9S-Eft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
