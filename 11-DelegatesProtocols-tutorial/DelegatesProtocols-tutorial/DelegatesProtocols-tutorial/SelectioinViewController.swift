@@ -7,15 +7,20 @@
 
 import UIKit
 
+protocol SideSelectionDelegate {
+    func didTapChoice(image: UIImage, name: String, color: UIColor)
+}
+
+// In this tutorial for Delegate Pattern, this ViewController role as a Boss of BaseViewController.
 class SelectioinViewController: UIViewController {
     
     // MARK: - Properties
+    var selectionDelegate: SideSelectionDelegate!
+    
+    // MARK: IBOutlets
     @IBOutlet weak var imperialButton: UIButton!
     @IBOutlet weak var rebelButton: UIButton!
     
-    // MARK: IBOutlets
-    
-
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +43,12 @@ class SelectioinViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func imperialButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(named: "vader")!, name: "Darth Vader", color: .red)
         dismiss(animated: true)
     }
     
     @IBAction func rebelButtonTapped(_ sender: Any) {
+        selectionDelegate.didTapChoice(image: UIImage(named: "luke")!, name: "Luke Skywalker", color: .cyan)
         dismiss(animated: true)
     }
 }
