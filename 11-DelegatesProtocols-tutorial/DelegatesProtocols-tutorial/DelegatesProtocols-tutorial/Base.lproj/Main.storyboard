@@ -130,6 +130,7 @@
                     <connections>
                         <outlet property="imperialButton" destination="3Ao-kl-znL" id="a7Q-UV-Ybm"/>
                         <outlet property="rebelButton" destination="tnJ-CR-r7c" id="ppH-x2-Bax"/>
+                        <outlet property="titleLabel" destination="weQ-IS-zou" id="CH4-Zv-9qb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJn-9S-Eft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

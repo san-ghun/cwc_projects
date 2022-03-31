@@ -18,6 +18,7 @@ class SelectioinViewController: UIViewController {
     var selectionDelegate: SideSelectionDelegate!
     
     // MARK: IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imperialButton: UIButton!
     @IBOutlet weak var rebelButton: UIButton!
     
@@ -26,6 +27,9 @@ class SelectioinViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.otherTapped(_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
 
@@ -49,6 +53,11 @@ class SelectioinViewController: UIViewController {
     
     @IBAction func rebelButtonTapped(_ sender: Any) {
         selectionDelegate.didTapChoice(image: UIImage(named: "luke")!, name: "Luke Skywalker", color: .cyan)
+        dismiss(animated: true)
+    }
+    
+    @IBAction func otherTapped(_ sender: UITapGestureRecognizer) {
+        selectionDelegate.didTapChoice(image: UIImage(named: "logo")!, name: "", color: .black)
         dismiss(animated: true)
     }
 }
