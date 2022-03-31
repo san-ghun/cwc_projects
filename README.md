@@ -144,3 +144,14 @@ Tips:
 - ...
 
 ---
+
+TODO: - [11-DelegatesProtocols-tutorial]()
+- .
+
+Tags: `MVC`, `UIKit`, `Storyboard`, `View Life cycle`, `protocol`, `delegate`, `Delegate Protocol Pattern`, `UITapGestureRecognizer`, `ViewController.addGestureRecognizer()`, `storyboard?.instantiateViewController()`, `.modalPresentationStyle`, `present()`, `extension`
+
+Tips:
+- Be aware of the relation between ViewControllers with the Delegate Protocol Pattern, which usually called intern & boss relationship.
+- ...
+
+---
