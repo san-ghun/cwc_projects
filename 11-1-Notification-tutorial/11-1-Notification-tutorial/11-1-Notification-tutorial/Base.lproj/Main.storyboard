@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2vp-xh-pEX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="XZH-u7-wj4">
+            <objects>
+                <viewController id="2vp-xh-pEX" customClass="BaseViewController" customModule="_1_1_Notification_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jym-YS-ipF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LMA-fp-HOr">
+                                <rect key="frame" x="25" y="225.5" width="364" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LMA-fp-HOr" secondAttribute="height" multiplier="16:9" id="Kfl-hp-dLf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZJ-7y-hzE">
+                                <rect key="frame" x="77" y="571.5" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="dce-vE-tPh"/>
+                                    <constraint firstAttribute="height" constant="50" id="tda-4r-jSc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Choose a Side">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Verdana-Bold" family="Verdana" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="2vp-xh-pEX" eventType="touchUpInside" id="0cg-eR-lOA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDR-cs-caT">
+                                <rect key="frame" x="20" y="445.5" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="O90-Z9-YVA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mrb-O0-cGO"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mDR-cs-caT" firstAttribute="leading" secondItem="Mrb-O0-cGO" secondAttribute="leading" constant="20" id="cQ6-FR-gqz"/>
+                            <constraint firstItem="Mrb-O0-cGO" firstAttribute="trailing" secondItem="mDR-cs-caT" secondAttribute="trailing" constant="20" id="lGX-ca-uyD"/>
+                            <constraint firstItem="Mrb-O0-cGO" firstAttribute="trailing" secondItem="LMA-fp-HOr" secondAttribute="trailing" constant="25" id="ngw-fg-uLl"/>
+                            <constraint firstItem="mDR-cs-caT" firstAttribute="top" secondItem="LMA-fp-HOr" secondAttribute="bottom" constant="15" id="prm-BZ-u3n"/>
+                            <constraint firstItem="LMA-fp-HOr" firstAttribute="centerY" secondItem="Jym-YS-ipF" secondAttribute="centerY" constant="-120" id="q4c-mQ-3HZ"/>
+                            <constraint firstItem="VZJ-7y-hzE" firstAttribute="centerX" secondItem="Jym-YS-ipF" secondAttribute="centerX" id="uOL-e2-r9f"/>
+                            <constraint firstItem="LMA-fp-HOr" firstAttribute="leading" secondItem="Mrb-O0-cGO" secondAttribute="leading" constant="25" id="xFp-F9-YvY"/>
+                            <constraint firstItem="VZJ-7y-hzE" firstAttribute="top" secondItem="mDR-cs-caT" secondAttribute="bottom" constant="67" id="xlx-zZ-J9X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="VZJ-7y-hzE" id="LmO-Ii-Pz2"/>
+                        <outlet property="mainImageView" destination="LMA-fp-HOr" id="Ht0-iz-qzO"/>
+                        <outlet property="nameLabel" destination="mDR-cs-caT" id="nVj-Mu-w6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bof-Zy-waw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </scene>
+        <!--Selection View Controller-->
+        <scene sceneID="f3s-Et-hvr">
+            <objects>
+                <viewController storyboardIdentifier="SelectionView" id="tfk-MO-FuK" customClass="SelectionViewController" customModule="_1_1_Notification_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I0d-Tp-HZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEM-MZ-pE9">
+                                <rect key="frame" x="70" y="124" width="274.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="8AV-6q-6Aa"/>
+                                    <constraint firstAttribute="height" constant="35" id="Qez-fV-oeU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="28"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v8-3B-Hax">
+                                <rect key="frame" x="132" y="293" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5Xh-cN-dH6"/>
+                                    <constraint firstAttribute="height" constant="150" id="Ds4-LG-uh8"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="imperial"/>
+                                <connections>
+                                    <action selector="imperialButtonTapped:" destination="tfk-MO-FuK" eventType="touchUpInside" id="ZRB-cC-rt2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPD-wC-19a">
+                                <rect key="frame" x="132" y="493" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Eri-Lw-Exf"/>
+                                    <constraint firstAttribute="width" constant="150" id="PME-N7-AkM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="rebel"/>
+                                <connections>
+                                    <action selector="rebelButtonTapped:" destination="tfk-MO-FuK" eventType="touchUpInside" id="A4Q-3o-7bp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F0G-lD-Q6a"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1v8-3B-Hax" firstAttribute="centerY" secondItem="I0d-Tp-HZ7" secondAttribute="centerY" constant="-80" id="DCe-GA-C7K"/>
+                            <constraint firstItem="1v8-3B-Hax" firstAttribute="centerX" secondItem="I0d-Tp-HZ7" secondAttribute="centerX" id="NOO-AM-fGh"/>
+                            <constraint firstItem="dEM-MZ-pE9" firstAttribute="top" secondItem="F0G-lD-Q6a" secondAttribute="top" constant="80" id="Wm1-gb-meJ"/>
+                            <constraint firstItem="dEM-MZ-pE9" firstAttribute="centerX" secondItem="I0d-Tp-HZ7" secondAttribute="centerX" id="Yrd-3b-Fxb"/>
+                            <constraint firstItem="VPD-wC-19a" firstAttribute="centerX" secondItem="I0d-Tp-HZ7" secondAttribute="centerX" id="d9c-lB-RIF"/>
+                            <constraint firstItem="VPD-wC-19a" firstAttribute="top" secondItem="1v8-3B-Hax" secondAttribute="bottom" constant="50" id="iB6-Su-PR7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imperialButton" destination="1v8-3B-Hax" id="j0V-sf-dfY"/>
+                        <outlet property="rebelButton" destination="VPD-wC-19a" id="IHY-fu-aoI"/>
+                        <outlet property="titleLabel" destination="dEM-MZ-pE9" id="9JW-cj-RSz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4j-Wq-3jJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imperial" width="150" height="150"/>
+        <image name="logo" width="1000" height="427.5"/>
+        <image name="rebel" width="512" height="512"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
