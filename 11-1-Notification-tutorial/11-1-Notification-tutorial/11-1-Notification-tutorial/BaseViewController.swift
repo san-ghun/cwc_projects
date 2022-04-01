@@ -32,6 +32,11 @@ class BaseViewController: UIViewController {
     // MARK: Custom Methods
     
     // MARK: IBActions
+    @IBAction func chooseButtonTapped(_ sender: Any) {
+        let selectionVC = storyboard?.instantiateViewController(withIdentifier: selectionViewID) as! SelectionViewController
+        selectionVC.modalPresentationStyle = .fullScreen
+        present(selectionVC, animated: true, completion: nil)
+    }
     
 }
 

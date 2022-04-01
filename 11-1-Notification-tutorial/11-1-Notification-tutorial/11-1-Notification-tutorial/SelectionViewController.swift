@@ -21,6 +21,9 @@ class SelectionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.otherTapped(_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
 
@@ -37,5 +40,15 @@ class SelectionViewController: UIViewController {
     // MARK: - Methods
     
     // MARK: IBActions
+    @IBAction func imperialButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
+    @IBAction func rebelButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func otherTapped(_ sender: UITapGestureRecognizer) {
+        dismiss(animated: true)
+    }
 }
