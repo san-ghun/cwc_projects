@@ -62,6 +62,11 @@ class SelectionViewController: UIViewController {
     
     @IBAction func otherTapped(_ sender: UITapGestureRecognizer) {
         
+        let name = Notification.Name(rawValue: resetNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
+        
+//        NotificationCenter.default.post(name: didReceiveResetNotification, object: nil)
+        
         dismiss(animated: true)
     }
 }
