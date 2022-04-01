@@ -41,14 +41,27 @@ class SelectionViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func imperialButtonTapped(_ sender: Any) {
+        
+        let name = Notification.Name(rawValue: darkNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
+        
+//        NotificationCenter.default.post(name: didReceiveDarkNotification, object: nil)
+        
         dismiss(animated: true)
     }
     
     @IBAction func rebelButtonTapped(_ sender: Any) {
+        
+        let name = Notification.Name(rawValue: lightNotificationKey)
+        NotificationCenter.default.post(name: name, object: nil)
+        
+//        NotificationCenter.default.post(name: didReceiveLightNotification, object: nil)
+        
         dismiss(animated: true)
     }
     
     @IBAction func otherTapped(_ sender: UITapGestureRecognizer) {
+        
         dismiss(animated: true)
     }
 }
