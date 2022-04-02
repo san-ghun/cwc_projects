@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
+    var fileViewOrigin: CGPoint!
     
     // MARK: IBOutlets
     @IBOutlet weak var fileImageView: UIImageView!
@@ -19,14 +20,39 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        addPanGesture(view: fileImageView)
+        fileViewOrigin = fileImageView.frame.origin
     }
 
 
     // MARK: - Methods
     
     // MARK: Custom Methods
+    func addPanGesture(view: UIView) {
+        
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(sender:)))
+        view.addGestureRecognizer(pan)
+    }
     
     // MARK: IBActions
+    @objc func handlePan(sender: UIPanGestureRecognizer) {
+        
+        let fileView = sender.view!
+        let translation = sender.translation(in: view)
+        
+        switch sender.state {
+        case .began, .changed:
+            
+            fileView.center = CGPoint(x: fileView.center.x + translation.x, y: fileView.center.y + translation.y)
+            sender.setTranslation(CGPoint.zero, in: view)
+            
+        case .ended:
+            break
+        default:
+            break
+        }
+    }
     
 }
 
