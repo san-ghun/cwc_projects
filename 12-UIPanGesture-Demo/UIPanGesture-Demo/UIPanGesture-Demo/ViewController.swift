@@ -42,15 +42,23 @@ class ViewController: UIViewController {
         let translation = sender.translation(in: view)
         
         switch sender.state {
+            
         case .began, .changed:
             fileView.center = CGPoint(x: fileView.center.x + translation.x, y: fileView.center.y + translation.y)
             sender.setTranslation(CGPoint.zero, in: view)
+            
         case .ended:
             if fileView.frame.intersects(trashImageView.frame) {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.fileImageView.alpha = 0.0
                 }, completion: nil)
             }
+            else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.fileImageView.frame.origin = self.fileViewOrigin
+                }, completion: nil)
+            }
+            
         default:
             break
         }
